@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title> Teste  JavaScript </title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<script type="text/javascript"> 
+window.onmousedown = pressionaMouse;
+        function pressionaMouse(e)
+        {
+            alert('Botão do mouse pressionado em x = ' + e.screenX + ' e y = ' + e.screenY);
+        }
+
+</script>
+
+</head>
+
+<body style="background:#000000;">
+    
+    <canvas id="tela" width="640" height="480">Sem suporte ao HTML5</canvas>
+    <audio id="som">
+        <source src="snd/Bomba-22.mp3"/>
+    </audio>
+    <script>
+             
+    var canvas = document.getElementById("tela");
+            var context = canvas.getContext("2d");
+ 
+            //Definindo a cor vermelha
+            context.fillStyle = "rgb(255,0,0)";
+ 
+            //Coordenadas iniciais do quadrado
+            var x = 0;
+            var y = 200;
+ 
+	    var id_interval = window.setInterval('gameloop()', 5); //executa o gameloop a cada 50 milissegundos
+ 
+            window.onkeydown = pressionaTecla;
+            function pressionaTecla(e)
+            {
+                if(e.keyCode == 37)
+                {
+                    x = x - 1; //move para esquerda
+                }
+		else if(e.keyCode == 39)
+                {
+                    x = x + 1; //move para direita
+                }
+            }
+ 
+            function gameloop()
+            {
+                desenharQuadrado();
+            }
+ 
+            function desenharQuadrado()
+            {
+                context.clearRect(0, 0, 640, 480); //limpa todo o Canvas
+                context.fillRect(x, y, 40, 40); //desenha o quadrado na nova posição
+            
+    
+    }	
+         </script>
+
+<div id="texto">
+<p> Meu nome eh... </p>
+</div>
+
+<button onclick="mudaNome();" id="bt"> Ok </button>
+
+</body>
+
+
+</html>

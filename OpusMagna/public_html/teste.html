@@ -1,0 +1,45 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <canvas id="tela" width="800" height="600"></canvas>
+        
+        <script>
+            
+            var canvas = document.getElementById("tela");
+            var ctx = canvas.getContext("2d");
+
+//porta
+var porta = new Image();
+porta.src = 'img/porta.png';
+
+//var x = 538;
+            var y = 145;
+            ctx.drawImage(porta, 538, y, 213, 454);
+            
+            var interval = window.setInterval('portaLoop()', 1);
+            
+            function portaLoop(){
+                moverPorta();
+                if (y === -400)
+                    window.clearInterval(interval);
+            }
+            
+            function moverPorta(){
+                ctx.clearRect(0, 0, 800, 600);
+                y = y - 1;
+                ctx.drawImage(porta, 538, y);
+            }
+
+
+            
+        </script>
+    </body>
+</html>

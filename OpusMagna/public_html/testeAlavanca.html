@@ -1,0 +1,29 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <canvas id="tela" width="800" height="600"></canvas>
+        
+        <script>
+            
+            var canvas = document.getElementById("tela");
+            var ctx = canvas.getContext("2d");
+            
+            var mesa = new Image();
+mesa.src = 'img/mesa.png';
+ctx.drawImage(mesa, 300, 373, 213, 227);
+
+var alavanca = new Image();
+alavanca.src = 'img/alavanca.png';
+ctx.drawImage(alavanca, 468, 400, 30, 30);
+            
+        </script>
+    </body>
+</html>

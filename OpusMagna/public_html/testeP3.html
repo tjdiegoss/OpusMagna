@@ -1,0 +1,34 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <canvas id="tela" width="800" height="600"></canvas>
+        
+        <script>
+            
+            var canvas = document.getElementById("tela");
+var ctx = canvas.getContext("2d");
+            
+            var bgImage = new Image();
+bgImage.src = 'img/castelo.png';
+ctx.drawImage(bgImage, 0, 0, 800, 600);
+
+ctx.fillStyle = "rgb (128, 128, 128)";
+ctx.font = "24px Tahoma";
+ctx.textAlign = "left";
+ctx.textBaseline = "top";
+ctx.fillText("Agora Nícolas está dentro de um castelo abandonado e precisa ", 100, 350);
+ctx.fillText("usar os seus conhecimentos em Química para passar ", 100, 370);
+ctx.fillText("por todas as câmaras do castelo e chegar a última câmara, ", 100, 390);
+ctx.fillText("onde se encontra o objeto da sua busca.", 100, 410);
+          
+       </script>
+    </body>
+</html>

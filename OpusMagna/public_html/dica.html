@@ -1,0 +1,75 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <canvas id="tela" width="800" height="600"></canvas>
+        
+        <script>
+            
+            var canvas = document.getElementById("tela");
+var ctx = canvas.getContext("2d");
+            
+var bgImage = new Image();
+bgImage.src = 'img/parede.png';
+ctx.drawImage(bgImage, 0, 0, 800, 600);
+
+var atm1 = new Image();
+atm1.src = 'img/atm_oxigenio.png';
+ctx.drawImage(atm1, 282, 200, 80, 80);
+
+var atm2 = new Image();
+atm2.src = 'img/atm_oxigenio.png';
+ctx.drawImage(atm2, 362, 200, 80, 80);
+
+var atm3 = new Image();
+atm3.src = 'img/atm_hidrogenio.png';
+ctx.drawImage(atm3, 202, 200, 80, 80);
+
+var atm4 = new Image();
+atm4.src = 'img/atm_hidrogenio.png';
+ctx.drawImage(atm4, 122, 200, 80, 80);
+
+var mesa = new Image();
+mesa.src = 'img/mesa.png';
+ctx.drawImage(mesa, 300, 373, 319, 227);
+
+var alavanca = new Image();
+alavanca.src = 'img/alavanca.png';
+ctx.drawImage(alavanca, 560, 400, 30, 30);
+
+var buracoMesa = new Image();
+buracoMesa.src = 'img/buraco_mesa.png';
+ctx.drawImage(buracoMesa, 325, 395, 40, 25);
+ctx.drawImage(atm3, 325, 395, 39, 24);
+
+ctx.drawImage(buracoMesa, 435, 395, 40, 25);
+ctx.drawImage(atm1, 435, 395, 39, 24);
+
+ctx.drawImage(buracoMesa, 380, 395, 40, 25);
+ctx.drawImage(atm4, 380, 395, 39, 24);
+
+ctx.drawImage(buracoMesa, 490, 395, 40, 25);
+ctx.drawImage(atm2, 490, 395, 39, 24);
+
+
+ctx.fillStyle = "rgb (128, 128, 128)";
+ctx.font = "24px Tahoma";
+ctx.textAlign = "left";
+ctx.textBaseline = "top";
+//var texto = "H<sub>2</sub>O<sub>2</sub>;
+ctx.fillText("Dica:", 100, 100);
+ctx.fillText("Para substâncias com átomos repetidos", 100, 120);
+ctx.fillText("coloque os átomos repetidos juntos.", 100, 140);
+ctx.fillText("Peróxido de Hidrogênio ", 100, 160);
+
+          
+       </script>
+    </body>
+</html>

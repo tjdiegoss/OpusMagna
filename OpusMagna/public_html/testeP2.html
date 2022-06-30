@@ -1,0 +1,35 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <canvas id="tela" width="800" height="600"></canvas>
+        
+        <script>
+            
+            var canvas = document.getElementById("tela");
+var ctx = canvas.getContext("2d");
+            
+            var bgImage = new Image();
+bgImage.src = 'img/livro.png';
+ctx.drawImage(bgImage, 0, 0, 800, 600);
+
+ctx.fillStyle = "rgb (128, 128, 128)";
+ctx.font = "24px Tahoma";
+ctx.textAlign = "left";
+ctx.textBaseline = "top";
+ctx.fillText("Nicolas é um escrivão que encontrou", 160, 220);
+ctx.fillText("num livro antigo a", 160, 240);
+ctx.fillText("localização da Pedra Filosofal.", 160, 260);
+          
+       </script>
+       
+       
+    </body>
+</html>

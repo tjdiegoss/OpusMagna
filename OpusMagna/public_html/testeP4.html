@@ -1,0 +1,52 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <canvas id="tela" width="800" height="600"></canvas>
+        
+        <script>
+            
+            var canvas = document.getElementById("tela");
+var ctx = canvas.getContext("2d");
+            
+            var bgImage = new Image();
+bgImage.src = 'img/parede.png';
+ctx.drawImage(bgImage, 0, 0, 800, 600);
+
+var atm1 = new Image();
+atm1.src = 'img/atm_nitrogenio.png';
+ctx.drawImage(atm1, 148, 427, 80, 80);
+
+var atm2 = new Image();
+atm2.src = 'img/atm_cloro.png';
+ctx.drawImage(atm2, 535, 354, 80, 80);
+
+var atm3 = new Image();
+atm3.src = 'img/atm_sodio.png';
+ctx.drawImage(atm3, 659, 127, 80, 80);
+
+var atm4 = new Image();
+atm4.src = 'img/atm_hidrogenio.png';
+ctx.drawImage(atm4, 232, 171, 80, 80);
+
+ctx.fillStyle = "rgb (128, 128, 128)";
+ctx.font = "24px Tahoma";
+ctx.textAlign = "left";
+ctx.textBaseline = "top";
+ctx.fillText("Em cada câmara, há várias esferas de vidro colorido,", 100, 100);
+ctx.fillText("representando átomos. Há uma inscrição na parede com o nome ", 100, 120);
+ctx.fillText("de uma substância química classificada como ", 100, 140);
+ctx.fillText("Função Inorgânica. Há uma mesa onde ele deve ", 100, 160);
+ctx.fillText("colocar as esferas na ordem correta para abrir a passagem ", 100, 180);
+ctx.fillText("que da acesso a câmara seguinte.", 100, 200);
+          
+       </script>
+    </body>
+</html>
